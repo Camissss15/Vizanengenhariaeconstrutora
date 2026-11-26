@@ -191,58 +191,87 @@
 
         <!-- SEÇÃO CONTATO -->
       
-<form action="receber_orcamento.php" method="POST" id="formOrcamento">
 
-    <div class="form-grupo">
-        <input
-            type="text"
-            name="nome"
-            placeholder="Seu nome completo"
-            required
-        >
+<!-- SEÇÃO CONTATO E ORÇAMENTO -->
+<section id="contato">
+
+    <div class="interface">
+
+        <div class="titulo-secao">
+            <h2>Solicite seu Orçamento</h2>
+        </div>
+
+        <div class="contato-form-container">
+
+            <div class="contato-descricao">
+                <h3>Vamos tirar seu projeto do papel?</h3>
+                <p>
+                    Preencha o formulário abaixo com suas informações.
+                    Nossa equipe entrará em contato para entender melhor
+                    suas necessidades.
+                </p>
+            </div>
+
+            <form action="receber_orcamento.php"
+                  method="POST"
+                  id="formOrcamento">
+
+                <div class="form-grupo">
+                    <input
+                        type="text"
+                        name="nome"
+                        placeholder="Seu nome completo"
+                        required
+                    >
+                </div>
+
+                <div class="form-grupo">
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Seu e-mail de contato"
+                        required
+                    >
+                </div>
+
+                <div class="form-grupo">
+                    <input
+                        type="tel"
+                        name="telefone"
+                        placeholder="Seu telefone / WhatsApp"
+                    >
+                </div>
+
+                <div class="form-grupo">
+                    <input
+                        type="text"
+                        name="assunto"
+                        placeholder="Assunto do orçamento"
+                        required
+                    >
+                </div>
+
+                <div class="form-grupo">
+                    <textarea
+                        name="mensagem"
+                        placeholder="Descreva brevemente seu projeto ou necessidade"
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">
+                    Enviar Solicitação
+                </button>
+
+                <p id="retornoOrcamento"></p>
+
+            </form>
+
+        </div>
+
     </div>
 
-    <div class="form-grupo">
-        <input
-            type="email"
-            name="email"
-            placeholder="Seu e-mail de contato"
-            required
-        >
-    </div>
-
-    <div class="form-grupo">
-        <input
-            type="tel"
-            name="telefone"
-            placeholder="Seu telefone / WhatsApp"
-        >
-    </div>
-
-    <div class="form-grupo">
-        <input
-            type="text"
-            name="assunto"
-            placeholder="Assunto do orçamento"
-            required
-        >
-    </div>
-
-    <div class="form-grupo">
-        <textarea
-            name="mensagem"
-            placeholder="Descreva brevemente seu projeto ou necessidade"
-            required
-        ></textarea>
-    </div>
-
-    <button type="submit" class="btn-enviar">
-        Enviar Mensagem
-    </button>
-
-    <p id="retornoOrcamento"></p>
-
-</form>
+</section>
 
 
     </main>
