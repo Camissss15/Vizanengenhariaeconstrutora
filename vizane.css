@@ -435,20 +435,64 @@ section {
 /* ===================================================
    6. CONTATO & ORÇAMENTO (SEÇÃO AZUL - ÚLTIMA)
    =================================================== */
+
+/* ===================================================
+   6. CONTATO & ORÇAMENTO
+   =================================================== */
+
 #contato {
-    background-color: #07192e;
+    background: linear-gradient(
+        135deg,
+        #0b2545 0%,
+        #07192e 100%
+    );
+
     color: #ffffff;
+    padding: 100px 0;
+
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* CAIXA DO FORMULÁRIO */
+
 .contato-form-container {
-    max-width: 700px;
+    max-width: 750px;
+    width: 100%;
+
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 40px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background-color: #ffffff;
+
+    padding: 45px;
+
+    border-radius: 12px;
+
+    border-top: 5px solid var(--cor-secundaria);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
+
+/* DESCRIÇÃO */
+
+.contato-descricao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.contato-descricao h3 {
+    color: var(--cor-principal);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.contato-descricao p {
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* CAMPOS DO FORMULÁRIO */
 
 .form-grupo {
     margin-bottom: 20px;
@@ -457,36 +501,132 @@ section {
 .form-grupo input,
 .form-grupo textarea {
     width: 100%;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.95);
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+
+    padding: 16px;
+
+    background-color: #f8fafc;
+
+    border: 1px solid #dce3eb;
+    border-radius: 6px;
+
+    font-size: 0.95rem;
     color: var(--cor-texto-escuro);
+
+    outline: none;
+
+    transition: all 0.3s ease;
 }
 
+/* EFEITO AO SELECIONAR UM CAMPO */
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    border-color: var(--cor-secundaria);
+
+    background-color: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(240, 165, 0, 0.12);
+}
+
+/* ÁREA DE MENSAGEM */
+
 .form-grupo textarea {
-    height: 120px;
+    min-height: 140px;
     resize: vertical;
 }
 
+/* PLACEHOLDER */
+
+.form-grupo input::placeholder,
+.form-grupo textarea::placeholder {
+    color: #8994a3;
+}
+
+/* BOTÃO ENVIAR */
+
 .btn-enviar {
     width: 100%;
+
     padding: 16px;
+
     background-color: var(--cor-secundaria);
     color: #ffffff;
+
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-weight: 700;
+    border-radius: 6px;
+
+    font-size: 0.95rem;
+    font-weight: 800;
+
     text-transform: uppercase;
+
     cursor: pointer;
-    transition: background 0.3s ease;
+
+    transition: all 0.3s ease;
 }
 
 .btn-enviar:hover {
     background-color: var(--cor-secundaria-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(240, 165, 0, 0.25);
 }
+
+/* MENSAGEM DE RETORNO */
+
+#retornoOrcamento {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--cor-principal);
+}
+
+/* ===================================================
+   RESPONSIVIDADE DO ORÇAMENTO
+   =================================================== */
+
+@media (max-width: 768px) {
+
+    #contato {
+        padding: 65px 15px;
+    }
+
+    .contato-form-container {
+        padding: 30px 22px;
+    }
+
+    .contato-descricao h3 {
+        font-size: 1.25rem;
+    }
+
+    .contato-descricao p {
+        font-size: 0.88rem;
+    }
+
+    .form-grupo input,
+    .form-grupo textarea {
+        padding: 14px;
+        font-size: 0.9rem;
+    }
+
+    .btn-enviar {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .contato-form-container {
+        padding: 25px 18px;
+    }
+
+    .contato-descricao {
+        margin-bottom: 25px;
+    }
+
+}
+
 
 /* ===================================================
    RESPONSIVIDADE (MOBILE / TABLETS)
